@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-notes-ingress
+  namespace: nginx
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: prefix
+        path: /nginx
+        backend:
+          service:
+            name:  nginx-service
+            port: 80
+      - pathType: prefix
+        path: /app
+        backend:
+          service:
+            name: notes-app-service
+            poet: 8000
