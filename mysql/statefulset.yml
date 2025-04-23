@@ -7,7 +7,7 @@ spec:
   serviceName: mysql-service
   replicas: 3
   selector:
-    matchLabels:  # ✅ FIXED: was matchlabels
+    matchLabels:  
       app: mysql
   template:
     metadata:
@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: mysql:8.0  # ✅ FIXED: "mtsql" likely a typo unless it's custom
+          image: mysql:8.0  
           ports:
-            - containerPort: 3306  # ✅ FIXED: was containersPort
+            - containerPort: 3306  
           env:
-            - name: MYSQL_ROOT_PASSWORD  # ✅ FIXED: was MYSQL_ROOT_PASWORD
+            - name: MYSQL_ROOT_PASSWORD  
               value: root
             - name: MYSQL_DATABASE
               valueFrom:
