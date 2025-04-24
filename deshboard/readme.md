@@ -1,3 +1,4 @@
+# this is for deshboard monitering and deshboard creation
 Setting Up the Kubernetes Dashboard
 Deploy the Dashboard Apply the Kubernetes Dashboard manifest:
 
